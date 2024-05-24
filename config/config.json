@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "snowy_user",
-    "password": "Fugheu5auv9zohf0xee3ziefei6gan",
+    "username": "gnasher_user",
+    "password": "Biaxu3chaeviPh5hiengobaiWuYeecaequ",
     "database": "snowy",
     "host": "ssh.climbingclan.com",
     "dialect": "mysql"

@@ -4,9 +4,9 @@ const options = {
     definition: {
         openapi: '3.0.0',
         info: {
-            title: 'Snowy API',
+            title: 'Gnasher API',
             version: '1.0.0',
-            description: 'A simple API for the Snowy Backend',
+            description: 'A simple API for the Gnasher Backend',
         },
     },
     apis: ['./routes/*.js'], // Path to your API routes files

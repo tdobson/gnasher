@@ -1,29 +1,49 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/sequelize');
 
-class User extends Model {}
+class Villa extends Model {}
 
-User.init({
+Villa.init({
     uuid: {
         type: DataTypes.STRING(36),
         primaryKey: true,
         unique: true,
         allowNull: false
     },
-    role: {
-        type: DataTypes.STRING(255),
-        allowNull: false
+    websiteId: {
+        type: DataTypes.INTEGER,
+        allowNull: true
+    },
+    legacyId: {
+        type: DataTypes.INTEGER,
+        allowNull: true
     },
     name: {
         type: DataTypes.STRING(255),
         allowNull: false
     },
-    email: {
+    description: {
+        type: DataTypes.STRING(3000),
+        allowNull: true
+    },
+    resort: {
         type: DataTypes.STRING(255),
+        allowNull: true
+    },
+    capacityAdults: {
+        type: DataTypes.INTEGER,
         allowNull: false
     },
-    phone: {
-        type: DataTypes.STRING(30),
+    capacityChildren: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    price: {
+        type: DataTypes.DECIMAL(10,2),
+        allowNull: false
+    },
+    owner: {
+        type: DataTypes.STRING(255),
         allowNull: false
     },
     createdBy: {
@@ -45,9 +65,9 @@ User.init({
     }
 }, {
     sequelize,
-    modelName: 'User',
-    tableName: 'gn_user',
+    modelName: 'Villa',
+    tableName: 'gn_villas',
     underscored: true
 });
 
-module.exports = User;
+module.exports = Villa;

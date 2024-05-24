@@ -1,11 +1,11 @@
-# Snowy API
+# Gnasher API
 
-Snowy API is a comprehensive backend system designed for managing solar panel installations and related processes. It is built on Node.js and interacts with a MySQL database, providing a JSON API for various operations. The system is primarily focused on user management, project tracking, and integration with external data sources like Google Sheets.
+Gnasher API is a comprehensive backend system designed for villa booking and B&B bookings processes. It is built on Node.js and interacts with a MySQL database, providing a JSON API for various operations. The system is primarily focused on user management, project tracking, and integration with external data sources like Google Sheets.
 
 ## Features
 
-- **User Management**: Create, read, update, and delete user information. Includes authentication and password reset functionalities.
-- **Project Management**: Manage solar panel installation projects, including details like client information, site data, and project status.
+- **Booking Management**: Create, read, update, and delete bookings information. Includes ability for maintenance and owner bookings
+- **Calendar Management**: Manages the calendar of villas to profile a single point of calendaring
 - **Data Import**: Import data from Google Sheets into the Snowy database, facilitating seamless integration of external data sources.
 - **Authentication**: Secure routes with JWT-based authentication middleware.
 - **Error Handling**: Centralized error handling for consistent API responses.
@@ -56,7 +56,7 @@ Snowy API is a comprehensive backend system designed for managing solar panel in
 
 ## Contributing
 
-Contributions to the Snowy API are welcome. Please follow the standard fork-and-pull request workflow.
+Contributions to the Gnasher API are welcome. Please follow the standard fork-and-pull request workflow.
 
 ## License
 
