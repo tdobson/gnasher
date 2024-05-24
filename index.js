@@ -37,7 +37,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use(errorHandler);
 
 // Connection to the database and then starting the server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Function to sync database
 const syncDatabase = async () => {

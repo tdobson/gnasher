@@ -8,5 +8,63 @@ paths:
       summary: Get all users
       responses:
         '200':
-          description: Success
-y
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+  /api/v1/elevations:
+    get:
+      summary: Get all elevations
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Elevation'
+
+  /api/v1/elevations/{jobCode}:
+    get:
+      summary: Get elevations by project
+      parameters:
+        - in: path
+          name: jobCode
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Elevation'
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        email:
+          type: string
+
+    Elevation:
+      type: object
+      properties:
+        id:
+          type: integer
+        jobCode:
+          type: string
+        elevation:
+          type: number
